@@ -1,4 +1,4 @@
-package com.francescsoftware.navigationsample
+package com.francescsoftware.navigationsample.two
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.SavedStateHandle
@@ -19,7 +19,7 @@ class TwoViewModel @Inject constructor(
         private set
 
     init {
-        val argument = savedStateHandle.get<String>("two_arg").orEmpty()
+        val argument = savedStateHandle.get<String>(DestinationOneArg).orEmpty()
         state.value = state.value.copy(
             value = argument,
         )
